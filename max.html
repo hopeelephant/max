@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img{
+			width: 200px;
+			height: 150px;
+		}
+		.box{
+			float: left;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="images/a.jpg" alt=""><br />
+		<input type="button" value="max" class="max">
+		<input type="button" value="min" class="min">
+	</div>
+	<div class="box">
+		<img src="images/b.jpg" alt=""><br />
+		<input type="button" value="max" class="max">
+		<input type="button" value="min" class="min">
+	</div>
+	<div class="box">
+		<img src="images/c.jpg" alt=""><br />
+		<input type="button" value="max" class="max">
+		<input type="button" value="min" class="min">
+	</div>
+	<div class="box">
+		<img src="images/d.jpg" alt=""><br />
+		<input type="button" value="max" class="max">
+		<input type="button" value="min" class="min">
+	</div>
+	<script src="js/jquery-3.0.0.js"></script>
+	<script>
+		var width=$("img").width();
+		if(width=300){
+			$(".max").click(function(){
+				$(this).parent().find("img").width(400);
+				$(this).parent().find("img").height(300);
+			})
+		}
+		if(width=600){
+			$(".min").click(function(){
+				$(this).parent().find("img").width(200);
+				$(this).parent().find("img").height(150);
+			})
+		}
+	</script>
+</body>
+</html>
